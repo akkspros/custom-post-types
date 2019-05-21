@@ -1,5 +1,7 @@
 # Custom Post Types
 
+Below is a list of elements found in each learning module, and a brief description of each. To know and undersatnd the wordpress custom post types.
+
 ## Description
 
 In this module, you'll learn about custom post types, what they are, when you should use them and how to create your owns to enhance your WordPress site.
@@ -11,6 +13,43 @@ At the end of this lesson, you will be able to:
 * Define custom post types in WordPress,
 * Identify when and how should custom post types be created,
 * Create your own simple custom post type using functions.php file of your theme.
+
+## Target Audience
+
+Who is this lesson intended for? What interests/skills would they bring? Choose all that apply.
+
+* [ ] Users
+* [X] Designers
+* [X] Developers
+* [X] Speakers
+* [ ] All
+
+## Experience Level
+
+How much experience would a participant need to get the most from this lesson?
+
+* [x] Beginner
+* [x] Intermediate
+* [ ] Advanced
+* [ ] Any
+
+## Type of Instruction
+
+Which strategies will be used for this lesson plan? Choose all that apply.
+
+* [X] Demonstration
+* [ ] Discussion
+* [X] Exercises
+* [ ] Feedback
+* [x] Lecture (Presentation)
+* [x] Show & Tell
+* [ ] Tutorial
+
+## Time Estimate (Duration)
+
+How long will it take to teach this lesson (in minutes)?
+
+50 minutes
 
 ## Prerequisite Skills
 
