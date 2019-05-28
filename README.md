@@ -59,22 +59,25 @@ You will be better equipped to work through this lesson if you have experience i
 * [functions.php file](https://make.wordpress.org/training/handbook/theme-school/what-to-include-in-functions-php/)
 * [post vs pages](https://make.wordpress.org/training/handbook/user-lessons/pages-vs-posts/) difference
 
-## Assets
 
-* Installation of WordPress
-* [Twenty Sixteen](https://wordpress.org/themes/twentysixteen/) theme
-
-## Screening Questions
+## Readiness Questions
 
 1. Are you familiar with the concept of a child theme in WordPress?
 2. Do you have a self-hosted WordPress website?
 
-## Teacher Notes
+## Materials Needed
 
-* **Time Estimate:** 30 minutes
+* Installation of WordPress
+* Any WordPress Theme. For example: [Twenty Sixteen](https://wordpress.org/themes/twentysixteen/) theme
+
+## Notes for the Instructor
+
 * The recommended way to approach the scenarios would be to demonstrate and explain the process first and then ask students to repeat the actions using their own devices, while you’re available for questions and troubleshooting if something doesn’t work out.
+
 * It is easiest for students to work on a locally installed copy of WordPress. Set some time aside before class to assist students with installing WordPress locally if they need it or, if possible, send them out instructions before the class so they would come prepared. For more information on how to install WordPress locally, please visit our [Teacher Resources](https://make.wordpress.org/training/teacher-resources/) page.
+
 * The preferred answer to the screening questions is “yes”. Participants who reply “no” to question #1 might require a bit of explanation, and if they answer “no” to question # 2 they may be grouped with other students to work in pairs on the task.
+
 * You may print out the Hands-On Walkthrough part to use it as handouts or send it out as a .pdf file to keep it green and preserve the links used throughout the document.
 
 ## Hands-on Walkthrough
@@ -112,8 +115,10 @@ You want to develop a theme for an online portfolio website. So you want to have
 
 #### Registering a custom post type: The Basics
 
-1. Make sure you've activated [WordPress TwentySixteen Theme](https://wordpress.org/themes/twentysixteen/). </br>
-2. Open its function.php file in Sublime/gedit/Notepad/any other text editor you're comfortable using. The theme's function.php file's path should be: <your root WP folder>/wp-content/themes/twentysixteen. </br>
+1. Make sure you've activated your WordPress Theme. In our example -> [WordPress TwentySixteen Theme](https://wordpress.org/themes/twentysixteen/). 
+
+2. Open its function.php file in Sublime/gedit/Notepad/any other text editor you're comfortable using. The theme's function.php file's path should be: <your root WP folder>/wp-content/themes/twentysixteen. 
+  
 3. Add the following piece of code to the very end of file.
 
 ```PHP
@@ -126,9 +131,11 @@ register_post_type( 'portfolio_item', $args );
 add_action( 'init', 'my_custom_portfolio_item' );
 ```
 
-The first line is just a comment to let your future self and possibly others know what the modifications are for. Further on, you'll describe the new post type's settings (actually, lack of any custom settings for now) and register it. Finally, add_action directive is meant to add a described function to WordPress via the _init_ hook which runs after WordPress itself has finished loading, but before any headers are sent. [![custom_post_base](https://make.wordpress.org/training/files/2014/10/cutom_post_base.png)](https://make.wordpress.org/training/files/2014/10/cutom_post_base.png) </br>
-4. Make sure you save the file. </br>
-5. Now, check out your site's dashboard. In spite of the fact that you registered the new post you won't see any changes. That's because you haven't configured your post to be public and visible in the dashboard explicitly, and it's not by default.</br>
+The first line is just a comment to let your future self and possibly others know what the modifications are for. Further on, you'll describe the new post type's settings (actually, lack of any custom settings for now) and register it. Finally, add_action directive is meant to add a described function to WordPress via the _init_ hook which runs after WordPress itself has finished loading, but before any headers are sent. 
+
+4. Make sure you save the file. 
+
+5. Now, check out your site's dashboard. In spite of the fact that you registered the new post you won't see any changes. That's because you haven't configured your post to be public and visible in the dashboard explicitly, and it's not by default.
 
 #### Registering a custom post type: adding arguments
 
@@ -170,7 +177,7 @@ This is what you added:
 3. Now, refresh your site's dashboard page. You should see a menu entry for the newly created custom post type, with options to add new portfolio items and view them in both the admin section and at the website as they are published. [![view_new_post_type](/images/view_new_post_type.png)](/images/view_new_post_type.png) 
 [tip]Feel free to read the [dashboard icons lesson](https://make.wordpress.org/training/handbook/theme-school/dashboard-icons/) to learn how to customize the icon added for your new post type.[/tip]
 
-### Summary
+## Lesson Outline
 
 A custom post type is a regular post with a different post_type value in the database which is designed to hold a type of content different from standard posts and pages. You should think about creating a custom post type when you want your new content type to be different in looks, meaning, and content from the post types you already have registered on your site. Ideally, you should create a plugin when you need custom post types, but you also can modify your theme’s functions.php file. The basic modification resembles the following piece of code:
 
@@ -195,7 +202,7 @@ Using lesson's materials and [arguments section](https://codex.wordpress.org/Fu
 * no archive
 * [additional task] using the video icon from Dashicons
 
-## Quiz
+## Assessment
 
 A short quiz for students to evaluate their retention of the material presented.
 
@@ -206,8 +213,6 @@ A short quiz for students to evaluate their retention of the material presented.
 3. Your new content type is different in looks, meaning, and content
 
 **Answer:** 3. Your new content type is different in looks, meaning, and content 
-
-<hr>
 
 **Which of the following is the main benefit of creating your custom post type as a new plugin?**
 
@@ -226,3 +231,11 @@ A short quiz for students to evaluate their retention of the material presented.
 4. get_custom_post_type();
 
 **Answer:** 1. get_post_types(); 
+
+## Additional Resources
+
+[register post type](https://codex.wordpress.org/Function_Reference/register_post_type) @ Codex
+
+### Lesson Wrap Up
+
+![](https://raw.githubusercontent.com/wptrainingteam/contributor-resources/master/images/lightbulb.png) Follow with the Exercises and Assessment outlined above.
