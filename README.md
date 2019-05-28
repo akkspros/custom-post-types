@@ -1,6 +1,6 @@
 # Custom Post Types
 
-Below is a list of elements found in each learning module, and a brief description of each. To know and undersatnd the wordpress custom post types.
+Below is a list of elements found in each learning module, and a brief description of each. To know and understand the WordPress custom post types.
 
 ## Description
 
@@ -124,8 +124,8 @@ You want to develop a theme for an online portfolio website. So you want to have
 ```PHP
 // Add new post type portfolio item
 function my_custom_portfolio_item() {
-$args = array();
-register_post_type( 'portfolio_item', $args );
+	$args = array();
+	register_post_type( 'portfolio_item', $args );
 }
 
 add_action( 'init', 'my_custom_portfolio_item' );
@@ -144,20 +144,20 @@ The first line is just a comment to let your future self and possibly others kno
 ```PHP
 // Add new post type portfolio item
 function my_custom_portfolio_item() {
-  $labels = array(
-    'name'               => _x( 'Portfolio items', 'post type general name' ),
-    'singular_name'      => _x( 'Portfolio item', 'post type singular name' ),
-    'menu_name'          => 'Portfolio'
-  );
-  $args = array(
-    'labels'        => $labels,
-    'description'   => 'Holds our custom portfolio items',
-    'public'        => true,
-    'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-    'has_archive'   => true,
-  );
-  register_post_type( 'portfolio_item', $args );
+	$labels = array(
+		'name'          => _x( 'Portfolio items', 'post type general name' ),
+		'singular_name' => _x( 'Portfolio item', 'post type singular name' ),
+		'menu_name'     => 'Portfolio'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Holds our custom portfolio items',
+		'public'        => true,
+		'menu_position' => 5,
+		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+		'has_archive'   => true,
+	);
+	register_post_type( 'portfolio_item', $args );
 }
 
 add_action( 'init', 'my_custom_portfolio_item' );
@@ -183,8 +183,8 @@ A custom post type is a regular post with a different post_type value in the dat
 
 ```PHP
 function my_custom_post_type() {
-  $args = array();
-  register_post_type( 'custom_post', $args ); 
+	$args = array();
+	register_post_type( 'custom_post', $args );
 }
 
 add_action( 'init', 'my_custom_post_type' );
